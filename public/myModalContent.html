@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+</head>
+
+<body class="login-body">
+ <div ng-repeat="mhs in mahasiswa">
+  <div class="modal-header">
+   <h3 class="modal-title">Profile Mahasiswa</h3>
+  </div>
+  <div class="modal-body">
+   <div class="row">
+    <section class="panel">
+     <div class="twt-feed  blue-bg">
+      <h1>
+       <% mhs['mhs_nama'] %>
+      </h1>
+      <p>
+       <% mhs['prodi_nama'] %>
+      </p>
+      <a href="#">
+                         <img src="../upload/images/profile/<% mhs['mhs_photo'] %>" alt="">
+                     </a>
+     </div>
+     <div class="weather-category twt-category">
+      <ul>
+       <li class="active">
+        <h5>
+         <% mhs['join_date'] %>
+        </h5>
+        Member Since
+       </li>
+       <li>
+        <h5>1245</h5>
+        Following
+       </li>
+       <li>
+        <h5>24657</h5>
+        Followers
+       </li>
+      </ul>
+     </div>
+     <table class="table table-responsive table-hover">
+      <tbody>
+       <tr>
+        <td>NIM</td>
+        <td>
+         <% mhs['mhs_nim'] %>
+        </td>
+       </tr>
+       <tr>
+        <td>Nama</td>
+        <td>
+         <% mhs['mhs_nama'] %>
+        </td>
+       </tr>
+       <tr>
+        <td>Angkatan</td>
+        <td>
+         <% mhs['angkatan_tahun'] %>
+        </td>
+       </tr>
+       <tr>
+        <td>Prodi</td>
+        <td>
+         <% mhs['prodi_nama'] %>
+        </td>
+       </tr>
+       <tr>
+        <td>Tanggal Lahir</td>
+        <td>
+         <% mhs['mhs_ttl'] %>
+        </td>
+       </tr>
+       <tr>
+        <td>Jenis Kelamin</td>
+        <td>
+         <% mhs['mhs_gender'] %>
+        </td>
+       </tr>
+       <tr>
+        <td>Alamat</td>
+        <td>
+         <% mhs['mhs_alamat'] %>
+        </td>
+       </tr>
+       <tr>
+        <td>Phone</td>
+        <td>
+         <% mhs['mhs_phone'] %>
+        </td>
+       </tr>
+       <tr>
+        <td>Email</td>
+        <td>
+         <% mhs['mhs_email'] %>
+        </td>
+       </tr>
+       <tr>
+        <td>Hak Akses</td>
+        <td>
+         <% mhs['role_name'] %>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <!--
+                 <aside class="profile-nav alt green-border">
+                     <section class="panel">
+
+
+                         <ul class="nav nav-pills nav-stacked">
+                             <li><a>NIM<span class="pull-right r-activity"><% mhs['mhs_nim'] %></span></a></li>
+                             <li><a>Nama<span class="pull-right r-activity"><% mhs['mhs_nama'] %></span></a></li>
+                             <li><a>Angkatan<span class="pull-right r-activity"><% mhs['angkatan_tahun'] %></span></a></li>
+                             <li><a>Prodi<span class="pull-right r-activity"><% mhs['prodi_nama'] %></span></a></li>
+                             <li><a>Tanggal lahir<span class="pull-right r-activity"><% mhs['mhs_ttl'] %></span></a></li>
+                             <li><a>Alamat<span class="pull-right r-activity"><% mhs['mhs_alamat'] %></span></a></li>
+                             <li><a>Hak Akses<span class="pull-right r-activity"><% mhs['role_name'] %></span></a></li>
+                         </ul>
+
+                     </section>
+                 </aside>
+
+                -->
+    </section>
+
+   </div>
+
+  </div>
+  <div class="modal-footer">
+   <button class="btn btn-primary" ng-click="ok()">OK</button>
+
+  </div>
+ </div>
+</body>
+
+</html>
